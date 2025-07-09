@@ -1,4 +1,5 @@
 # SmartTaskManager
+
 A modern, full-stack task management application built with React, Node.js, and TypeScript. Features real-time task tracking, data visualization, and responsive design.
 
 ## 🚀 Features
@@ -14,6 +15,7 @@ A modern, full-stack task management application built with React, Node.js, and 
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **React 18** with TypeScript
 - **Vite** for fast development and building
 - **Tailwind CSS** for styling
@@ -22,17 +24,18 @@ A modern, full-stack task management application built with React, Node.js, and 
 - **Axios** for HTTP requests
 
 ### Backend
+
 - **Node.js** with Express
 - **TypeScript** for type safety
 - **Zod** for runtime validation
 - **CORS** enabled for cross-origin requests
 
 ### Shared
+
 - **Shared TypeScript types** between frontend and backend
 - **Zod schemas** for consistent validation
 
 ## 📁 Project Structure
-
 
 Copy
 SmartTaskManager/
@@ -40,7 +43,6 @@ SmartTaskManager/
 ├── backend/ # Node.js API server
 ├── shared/ # Shared types and schemas
 └── README.md
-
 
 ## 🎯 Key Highlights
 
@@ -52,6 +54,7 @@ SmartTaskManager/
 - **Professional UI/UX** - Clean, intuitive interface with loading states
 
 ### 🌟 Future Enhancements
+
 User authentication and authorization
 Task categories and tags
 Due date reminders
@@ -60,22 +63,26 @@ Team collaboration features
 Dark mode theme
 
 ### 🤝 Contributing
+
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ### 👨‍💻 Author
-- **Ghulam Haider** 
+
+- **Ghulam Haider**
 - **GitHub** - https://github.com/haiderg
 - **LinkedIn** - https://www.linkedin.com/in/haiderg
-  
+
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/haiderg/SmartTaskManager.git
 cd SmartTaskManager
@@ -97,7 +104,7 @@ bash
 Start the development servers
 
 # Terminal 1 - Backend (Port 3001)
-cd backend && npm run dev
+cd backend && npm start
 
 # Terminal 2 - Frontend (Port 5173)
 cd frontend && npm run dev
@@ -118,3 +125,4 @@ npm run build - Compile TypeScript
 npm start - Start production server
 
 
+```
