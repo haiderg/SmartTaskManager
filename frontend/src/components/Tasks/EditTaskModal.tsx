@@ -22,7 +22,7 @@ export const EditTaskModal = ({
   useEffect(() => {
     if (task) {
       setTitle(task.title);
-      setDescription(task.description);
+      setDescription(task.description ?? "");
     }
   }, [task]);
 
@@ -32,9 +32,9 @@ export const EditTaskModal = ({
     if (!title.trim()) return;
 
     try {
-      await onSave(task.id, { 
-        title: title.trim(), 
-        description: description.trim() 
+      await onSave(task.id, {
+        title: title.trim(),
+        description: description.trim(),
       });
       onClose();
     } catch (error) {
