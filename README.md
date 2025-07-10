@@ -2,6 +2,9 @@
 
 A modern, full-stack task management application built with React, Node.js, and TypeScript. Features real-time task tracking, data visualization, and responsive design.
 
+## URL
+https://smarttaskmanager-frontend.vercel.app/
+
 ## 🚀 Features
 
 - **Full CRUD Operations** - Create, read, update, and delete tasks
