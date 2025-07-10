@@ -18,7 +18,7 @@ const getPrismaClient = async () => {
 };
 
 // Tasks routes
-app.get("/api/tasks", async (req, res) => {
+app.get("/tasks", async (req, res) => {
   try {
     const client = await getPrismaClient();
     const tasks = await client.task.findMany();
@@ -29,7 +29,7 @@ app.get("/api/tasks", async (req, res) => {
   }
 });
 
-app.post("/api/tasks", async (req, res) => {
+app.post("/tasks", async (req, res) => {
   try {
     const { title, description } = req.body;
     if (!title) {
@@ -47,7 +47,7 @@ app.post("/api/tasks", async (req, res) => {
   }
 });
 
-app.put("/api/tasks/:id", async (req, res) => {
+app.put("/tasks/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const { title, description, completed } = req.body;
@@ -63,7 +63,7 @@ app.put("/api/tasks/:id", async (req, res) => {
   }
 });
 
-app.delete("/api/tasks/:id", async (req, res) => {
+app.delete("/tasks/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const client = await getPrismaClient();
@@ -81,11 +81,11 @@ app.get("/", (req, res) => {
   res.json({ message: "SmartTaskManager Backend API" });
 });
 
-app.get("/api/test", (req, res) => {
+app.get("/test", (req, res) => {
   res.json({ message: "API test route working", timestamp: new Date().toISOString() });
 });
 
-app.get("/api/db-test", async (req, res) => {
+app.get("/db-test", async (req, res) => {
   try {
     const client = await getPrismaClient();
     await client.$connect();
