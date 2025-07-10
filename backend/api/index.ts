@@ -11,7 +11,7 @@ let prisma: any = null;
 
 const getPrismaClient = async () => {
   if (!prisma) {
-    const { PrismaClient } = await import("../generated/prisma");
+    const { PrismaClient } = await import("@prisma/client");
     prisma = new PrismaClient();
   }
   return prisma;
