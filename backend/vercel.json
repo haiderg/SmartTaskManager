@@ -16,5 +16,6 @@
       "dest": "/api/index.ts"
     }
   ],
-  "installCommand": "npm install && cd ../shared && npm install"
+  "installCommand": "npm install && cd ../shared && npm install",
+  "buildCommand": "npm run build"
 }
