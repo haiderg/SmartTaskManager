@@ -81,4 +81,19 @@ app.get("/", (req, res) => {
   res.json({ message: "SmartTaskManager Backend API" });
 });
 
+app.get("/api/test", (req, res) => {
+  res.json({ message: "API test route working", timestamp: new Date().toISOString() });
+});
+
+app.get("/api/db-test", async (req, res) => {
+  try {
+    const client = await getPrismaClient();
+    await client.$connect();
+    res.json({ message: "Database connection successful" });
+  } catch (error) {
+    console.error('Database connection error:', error);
+    res.status(500).json({ error: "Database connection failed", details: error.message });
+  }
+});
+
 export default app;
