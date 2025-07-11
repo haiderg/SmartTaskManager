@@ -5,7 +5,7 @@ import {
   getCoreRowModel,
   getSortedRowModel,
   getPaginationRowModel,
-  flexRender
+  flexRender,
 } from "@tanstack/react-table";
 
 import type { ColumnDef, SortingState } from "@tanstack/react-table";

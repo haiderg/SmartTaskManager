@@ -6,6 +6,11 @@ import { useTasks } from "../hooks/useTasks";
 
 const Dashboard = () => {
   const { tasks } = useTasks();
+
+  const completedTasks = tasks.filter((task) => task.completed === true).length;
+  const pendingTasks = tasks.filter((task) => task.completed === false).length;
+  const totalTasks = tasks.length;
+
   return (
     <>
       <div
@@ -22,17 +27,17 @@ const Dashboard = () => {
           >
             <TaskStatusCount
               title="Closed"
-              count={10}
+              count={completedTasks}
               type={ALERT_TYPES.SUCCESS}
             />
             <TaskStatusCount
               title="In Progress"
-              count={50}
+              count={pendingTasks}
               type={ALERT_TYPES.WARNING}
             />
             <TaskStatusCount
               title="Open"
-              count={100}
+              count={totalTasks}
               type={ALERT_TYPES.DANGER}
             />
           </div>
